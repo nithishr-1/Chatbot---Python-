@@ -1,0 +1,416 @@
+{
+  "Ready to Buy Loyalist": {
+    "description": "Total Orders > 3 & Email Click Rate > 0.25",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "total_orders",
+        "operator": ">",
+        "value": 3,
+        "display": "total_orders > 3"
+      },
+      {
+        "field": "email_click_rate",
+        "operator": ">",
+        "value": 0.25,
+        "display": "email_click_rate > 0.25"
+      }
+    ]
+  },
+  "One Touch Converter": {
+    "description": " Conversion Rate \u2265 0.5 - fast converters with minimal nudging",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "conversion_rate",
+        "operator": ">=",
+        "value": 0.5,
+        "display": "conversion_rate \u2265 0.5"
+      }
+    ]
+  },
+  "Slow Burner": {
+    "description": " Conversion rate \u2265 3 & visits_last_30_days",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "conversion_rate",
+        "operator": ">=",
+        "value": 3,
+        "display": "conversion_rate \u2265 3"
+      },
+      {
+        "field": "visits_last_30_days",
+        "operator": "=",
+        "value": 1,
+        "display": "visits_last_30_days = 1"
+      }
+    ]
+  },
+  "Channel Sensitive SMS Shopper": {
+    "description": "Low Email Click Rate ≤ 0.3 & High SMS Click Rate ≥ 0.5",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "email_click_rate",
+        "operator": "<=",
+        "value": 0.3,
+        "display": "email_click_rate \u2264 0.3"
+      },
+      {
+        "field": "sms_click_rate",
+        "operator": ">=",
+        "value": 0.5,
+        "display": "sms_click_rate \u2265 0.5"
+      }
+    ]
+  },
+  "Is Category Loyalist": {
+    "description": "Top Category Purchase Ratio \u2265 0.65",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "top_category_purchase_ratio",
+        "operator": ">=",
+        "value": 0.65,
+        "display": "top_category_purchase_ratio \u2265 0.65"
+      },
+      {
+        "field": "product_type_diversity_score",
+        "operator": "<=",
+        "value": 3,
+        "display": "product_type_diversity_score \u2264 3"
+      }
+    ]
+  },
+  "Dormant User": {
+    "description": "Last visit = 0 & Conversion Rate > 0.3",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "last_visit",
+        "operator": "=",
+        "value": 0,
+        "display": "last_visit = 0"
+      },
+      {
+        "field": "conversion_rate",
+        "operator": ">",
+        "value": 0.3,
+        "display": "conversion_rate > 0.3"
+      }
+    ]
+  },
+  "Holiday Shopper": {
+    "description": "Avg Order Value \u2265 60 & Holiday shopper \u2265 6",
+    "updated_ts": "2025-06-24T14:51:52.425828",
+    "rules": [
+      {
+        "field": "avg_order_value",
+        "operator": ">=",
+        "value": 60,
+        "display": "avg_order_value \u2265 60"
+      },
+      {
+        "field": "holiday_shopper",
+        "operator": "=",
+        "value": true,
+        "display": "holiday_shopper = true"
+      }
+    ]
+  },
+  "Multi Channel Performer": {
+    "description": "Customers who use multiple channels and have high conversion rate across them.",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "multi_channel_performer",
+        "operator": "=",
+        "value": "True",
+        "display": "multi_channel_performer = True"
+      },
+      {
+        "field": "conversion_rate",
+        "operator": ">",
+        "value": 0.3,
+        "display": "conversion_rate > 0.3"
+      }
+    ]
+  },
+  "Skimmers": {
+    "description": "High email opens but very low clicks and conversions.",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "email_open_rate",
+        "operator": ">=",
+        "value": 0.5,
+        "display": "email_open_rate ≥ 0.5"
+      },
+      {
+        "field": "email_click_rate",
+        "operator": "<",
+        "value": 0.2,
+        "display": "email_click_rate < 0.2"
+      },
+      {
+        "field": "email_conversion_rate",
+        "operator": "<",
+        "value": 0.05,
+        "display": "email_conversion_rate < 0.05"
+      }
+    ]
+  },
+  "Dropper": {
+    "description": "Customers who often abandon after clicking, showing poor click-to-conversion behavior.",
+    "updated_ts": "2025-05-29T12:12:20.056285",
+    "rules": [
+      {
+        "field": "click_rate",
+        "operator": ">",
+        "value": 0.2,
+        "display": "click_rate > 0.2"
+      },
+      {
+        "field": "conversion_rate",
+        "operator": "<",
+        "value": 0.05,
+        "display": "conversion_rate < 0.05"
+      }
+    ]
+  },
+  "Launch Spiker": {
+    "description": "Customers who respond quickly to new arrivals.",
+    "updated_ts": "2025-05-29T23:07:04.182923",
+    "rules": [
+      {
+        "field": "new_arrival_affinity",
+        "operator": ">=",
+        "value": 0.5,
+        "display": "new_arrival_affinity >= 0.5"
+      }
+    ]
+  },
+  "Fatigue Sensitive": {
+    "description": "Fatigue Sensitivity Score \u2265 0.75",
+    "updated_ts": "2025-05-29T00:55:33.603583",
+    "rules": [
+      {
+        "field": "fatigue_sensitive",
+        "operator": ">=",
+        "value": 0.7,
+        "display": "fatigue_sensitive >= 0.7"
+      }
+    ]
+  },
+  "Loyalist with Stale Engagement": {
+    "description": "Previously loyal customers with recent inactivity but purchases in the last 180 days.",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "ltv",
+        "operator": ">=",
+        "value": 1000,
+        "display": "ltv ≥ 1000"
+      },
+      {
+        "field": "tenure_days",
+        "operator": ">=",
+        "value": 180,
+        "display": "tenure_days ≥ 180"
+      }
+    ]
+  },
+  "Collection Binger": {
+    "description": "Customers who frequently buy from the same product collection.",
+    "updated_ts": "2025-05-29T00:58:07.749784",
+    "rules": [
+      {
+        "field": "collection_binger",
+        "operator": "=",
+        "value": true,
+        "display": "collection_binger = true"
+      }
+    ]
+  },
+  "Balanced Engagement": {
+    "description": "Customers with balanced interactions across Email, Push, and SMS channels.",
+    "updated_ts": "2025-05-28T22:39:49.039234",
+    "rules": [
+      {
+        "field": "multi_channel_performer",
+        "operator": "=",
+        "value": true,
+        "display": "multi_channel_performer = true"
+      }
+    ]
+  },
+  "Last Min Buyer": {
+    "description": "Purchased \u2264 3 days before Campaign End",
+    "updated_ts": "2025-06-24T13:00:12.778140",
+    "rules": [
+      {
+        "field": "last_min_buyer",
+        "operator": "=",
+        "value": true,
+        "display": "last_min_buyer = true"
+      }
+    ]
+  },
+  "High Value, Low Frequency Buyers": {
+    "description": "Customers with high Lifetime Value (LTV) but low purchase count, ideal for re-engagement with premium offers",
+    "updated_ts": "2025-06-24T13:20:13.597873",
+    "rules": [
+      {
+        "field": "ltv",
+        "operator": ">",
+        "value": 1000.0,
+        "display": "ltv > 1000.0"
+      }
+    ]
+  },
+  "High Value, High Engagement": {
+    "description": "Top-value customers with strong engagement — your most important audience.",
+    "updated_ts": "2025-06-24T13:52:22.544063",
+    "rules": [
+      {
+        "field": "ltv",
+        "operator": ">=",
+        "value": 1000.0,
+        "display": "ltv ≥ 1000.0"
+      },
+      {
+        "field": "multi_channel_performer",
+        "operator": "=",
+        "value": true,
+        "display": "multi_channel_performer = true"
+      }
+    ]
+  },
+  "Product Discovery Shoppers": {
+    "description": "Customers with a high diversity score in purchased product types, indicating they explore widely across your catalog. Ideal for cross-selling.",
+    "updated_ts": "2025-07-04T13:31:27.555001",
+    "rules": [
+      {
+        "field": "total_orders",
+        "operator": ">=",
+        "value": 2.0,
+        "display": "total_orders >= 2.0"
+      }
+    ]
+  },
+  "At-Risk, Fading Engagement": {
+    "description": "Customers who were once valuable but show increasing days since their last order and engagement, indicating potential churn.",
+    "updated_ts": "2025-06-24T22:24:44.018275",
+    "rules": [
+      {
+        "field": "visits_last_30_days",
+        "operator": ">",
+        "value": 2,
+        "display": "visits_last_30_days > 2"
+      },
+      {
+      "field": "fatigue_sensitive",
+      "operator": ">=",
+      "value": 0.5,
+      "display": "fatigue_sensitive ≥ 0.5"
+      }
+    ]
+  },
+  "Fast Movers": {
+    "description": "Customers who took less than 1 day to purchase",
+    "updated_ts": "2025-06-27T13:29:04.552075",
+    "rules": [
+      {
+        "field": "visits_last_30_days",
+        "operator": ">=",
+        "value": 4,
+        "display": "visits_last_30_days >= 4"
+      }
+    ]
+  },
+  "Frequent Big Spenders": {
+    "description": "Customers who made more than 30 purchases.",
+    "updated_ts": "2025-06-27T09:46:09.136823",
+    "rules": [
+      {
+        "field": "total_orders",
+        "operator": ">",
+        "value": 30,
+        "display": "total_orders > 30"
+      }
+    ]
+  },
+  "Recent Active Champs": {
+    "description": "Highly engaged users who recently interacted with your brand — likely to convert again.",
+    "updated_ts": "2025-06-27T11:59:00.266272",
+    "rules": [
+      {
+        "field": "visits_last_30_days",
+        "operator": ">",
+        "value": 5,
+        "display": "visits_last_30_days > 5"
+      },
+      {
+        "field": "last_visit",
+        "operator": ">=",
+        "value": "2023-06-25",
+        "display": "last_visit ≥ 2023-06-25"
+      }
+    ]
+  },
+  "Holiday Season Shoppers": {
+    "description": "Customers who frequently purchase during holiday or seasonal sale periods.",
+    "updated_ts": "2025-06-27T12:42:24.370077",
+    "rules": [
+      {
+        "field": "holiday_shopper",
+        "operator": "=",
+        "value": true,
+        "display": "holiday_shopper = true"
+      }
+    ]
+  },
+  "Responsive Texters": {
+    "description": "Customers with high engagement via SMS, responding at a rate above 5%.",
+    "updated_ts": "2025-06-27T12:53:07.134253",
+    "rules": [
+      {
+        "field": "sms_click_rate",
+        "operator": ">",
+        "value": 0.5,
+        "display": "sms_click_rate > 0.5"
+      }
+    ]
+  },
+  "SMS shopper": {
+    "description": "customers with low sms response rate",
+    "updated_ts": "2025-06-27T15:38:28.557921",
+    "rules": [
+      {
+        "field": "sms_open_rate",
+        "operator": "<=",
+        "value": 2.0,
+        "display": "sms_open_rate <= 2.0"
+      },
+      {
+        "field": "conversion_rate",
+        "operator": ">=",
+        "value": 0.7,
+        "display": "conversion_rate >= 0.7"
+      }
+    ]
+  },
+  "Single Channel Dependents": {
+    "description": "Only interact through email \u2014 test email-only campaigns or upsell through cross-channel nudges.",
+    "updated_ts": "2025-07-02T19:46:57.102020",
+    "rules": [
+      {
+        "field": "email_open_rate",
+        "operator": ">",
+        "value": 0.8,
+        "display": "email_open_rate > 0.8"
+      }
+    ]
+  }
+}
